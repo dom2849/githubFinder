@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.section{
+    padding: 1rem
+}
+
+.main-header{
+    background: orange;
+}
+
+.main-header__title{
+    margin: 0;
+}
+
+.github-search__wrapper{
+    box-sizing: border-box;
+    border: .1px solid grey;
+    padding: 1rem; 
+}
+
+.github-search__title{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+.github-search__directions{
+    font-weight: normal;
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+}
+
+.github-search__input{
+    width: 95%;
+    font-size: 1rem;
+    padding: .5rem;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+}

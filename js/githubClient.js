@@ -4,17 +4,16 @@ export default function GithubClient() {
 
 }
 
-
-GithubClient.prototype.getUser = async function (user) {
-    let userUrl = `https://api.github.com/users/${user}?client_id=${config.githubClientId}&client_secret=${config.githubSecretId}`
+GithubClient.prototype.getUser = async function (username) {
+    let userUrl = `https://api.github.com/users/${username}?client_id=${config.githubClientId}&client_secret=${config.githubSecretId}`
 
     return getData(userUrl);
 }
 
-GithubClient.prototype.getRepositories = function (user) {
-    let repositoriesUrl = `https://api.github.com/search/repositories?q=user:dom2849&sort=updated&order=desc?client_id=${config.githubClientId}&client_secret=${config.githubSecretId}`
+GithubClient.prototype.getRepositories = function (username) {
+    let userRepositoriesUrl = `https://api.github.com/search/repositories?q=user:${username}&sort=updated&order=desc?client_id=${config.githubClientId}&client_secret=${config.githubSecretId}`
 
-    return getData(repositoriesUrl);
+    return getData(userRepositoriesUrl);
 }
 
 async function getData(url) {
