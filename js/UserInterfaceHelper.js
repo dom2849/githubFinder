@@ -45,16 +45,16 @@ function createRepositoryLink(repository){
 }
 
 function createRepositoryStatistics(repository){
-    let list = document.createElement("ul");
-    list.classList = 'horizontal-list repository__stats';
+    let repositoryStatistics = document.createElement("ul");
+    repositoryStatistics.classList = 'horizontal-list repository__stats';
     let stars = createListItem('Stars: ' + repository.stars, 'hilight');
     let watchers = createListItem('Watchers: ' + repository.watchers, 'hilight');
     let forks = createListItem('Forks ' + repository.forks, 'hilight');
-    list.appendChild(stars);
-    list.appendChild(watchers);
-    list.appendChild(forks);
+    repositoryStatistics.appendChild(stars);
+    repositoryStatistics.appendChild(watchers);
+    repositoryStatistics.appendChild(forks);
 
-    return list;
+    return repositoryStatistics;
 }
 
 

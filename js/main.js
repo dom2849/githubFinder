@@ -18,11 +18,19 @@ let repo = {
     title: 'asdf',
     url : "https://clockify.me/tracker",
     stars: 12,
-    watchers: 123,
-    forks: 100
+    watchers: 12,
+    forks: 0
+}
+let repo1 = {
+    title: 'HELO LHELO HELLO',
+    url : "https://clockify.me/tracker",
+    stars: 12,
+    watchers: 12,
+    forks: 0
 }
 
 uiHelper.addRepository(repo)
+uiHelper.addRepository(repo1);
 
 // uiHelper.addUserProfileStatistics(list, 'hilight');
 
