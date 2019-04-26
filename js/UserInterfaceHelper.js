@@ -12,23 +12,18 @@ UserInterfaceHelper.prototype.addProfileLink = function(profileUrl){
     viewProfile.href = profileUrl;
 }
 
-UserInterfaceHelper.prototype.addUserProfileStatistics = function(userStatsList, listItemClass){
+UserInterfaceHelper.prototype.addProfileStatistic = function(statistic, statisticClassList){
     let userStats = document.querySelector(".user__stats");
-    appendListItems(userStats, userStatsList, listItemClass);
+    let listItem = createListItem(statistic, statisticClassList);
+    userStats.appendChild(listItem);
 }
 
-UserInterfaceHelper.prototype.addUserInformation = function(userInformationList, listItemClass){
+UserInterfaceHelper.prototype.addUserData = function(userData){
     let userInformation = document.querySelector(".user__information");
-    appendListItems(userInformation, userInformationList, listItemClass );
+    let listItem = createListItem(userData, '');
+    userInformation.appendChild(listItem);
 }
 
-
-function appendListItems(htmlElementToAppendTo, listItems, listItemClassList){
-    listItems.forEach(element =>{
-        let listItem = createListItem(element, listItemClassList);
-        htmlElementToAppendTo.appendChild(listItem);
-    })
-}
 
 function createListItem(content, classList){
     let listItem = document.createElement('li');
