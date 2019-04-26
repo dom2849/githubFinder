@@ -2,6 +2,32 @@ export default function UserInterfaceHelper(){
 
 }
 
+UserInterfaceHelper.prototype.clearUserProfile = function(){
+    let userProfile = document.querySelector(".user");
+    userProfile.style.display = 'none';
+    clearList('.user__stats');
+    clearList('.user__information');
+}
+
+UserInterfaceHelper.prototype.clearRepositories = function(){
+    let repositories = document.querySelector(".repositories");
+    repositories.style.display = 'none';
+    clearList('.repositories__list');
+}
+
+// The class of the list to clear
+function clearList(htmlListToClear){
+    let list = document.querySelector(htmlListToClear);
+    while (list.firstChild){
+        list.removeChild(list.firstChild);
+    }
+}
+
+UserInterfaceHelper.prototype.showUserProfile = function(){
+    let userProfile = document.querySelector(".user");
+    userProfile.style.display = '';
+}
+
 UserInterfaceHelper.prototype.addProfileImage = function(profileUrl){
     let image = document.querySelector(".user__image");
     image.src = profileUrl;
