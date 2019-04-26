@@ -11,7 +11,7 @@ GithubClient.prototype.getUser = async function (username) {
 }
 
 GithubClient.prototype.getRepositories = function (username) {
-    let userRepositoriesUrl = `https://api.github.com/search/repositories?q=user:${username}&sort=updated&order=desc?client_id=${config.githubClientId}&client_secret=${config.githubSecretId}`
+    let userRepositoriesUrl = `https://api.github.com/users/${username}/repos?&sort=updated&order=desc&client_id=${config.githubClientId}&client_secret=${config.githubSecretId}`
 
     return getData(userRepositoriesUrl);
 }
