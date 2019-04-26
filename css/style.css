@@ -41,6 +41,14 @@ body{
     list-style: none;
 }
 
+.hilight{
+    padding: .3rem 1rem;
+    margin-right: 1rem;
+    background: #19a319;
+    color: #fff;
+    border-radius: 5px;
+}
+
 .horizontal-list{
     display: flex;
 }
@@ -94,8 +102,6 @@ body{
     border-color: var(--light-blue);
 }
 
-
-
 .user__wrapper{
     display: flex;
     padding: 2rem 1rem;
@@ -127,13 +133,6 @@ body{
     margin-bottom: 1rem;
 }
 
-.hilight{
-    padding: .5rem 1rem;
-    margin-right: 1rem;
-    background: var(--light-blue);
-    color: #fff;
-    border-radius: 5px;
-}
 
 .user__information > *{
     border-bottom: 1px solid var(--light-grey);
@@ -145,6 +144,7 @@ body{
 
 /* REPOSITORIES */
 
+
 .repository__information{
     display: flex;
     padding: 1rem 0;
@@ -155,4 +155,5 @@ body{
 .repository__link{
     margin-top: .5rem;
     display:inline-block;
+    margin-right: 25rem;
 }
