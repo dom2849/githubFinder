@@ -39,6 +39,10 @@ body{
     margin: auto;
 }
 
+.error-message{
+    text-align: center;
+}
+
 .list{
     padding: 0;
     margin: 0;
@@ -48,7 +52,7 @@ body{
 .hilight{
     padding: .3rem 1rem;
     margin-right: 1rem;
-    background: #19a319;
+    background: #a8a8a8;
     color: #fff;
     border-radius: 5px;
     white-space: nowrap;

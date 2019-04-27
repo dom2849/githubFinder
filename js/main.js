@@ -28,14 +28,16 @@ async function getUser() {
     try {
         let profileDetails = await githubClient.getUser(userName);
         let repositories = await githubClient.getRepositories(userName);
-        console.log(repositories);
-        
+
         addProfileDetails(profileDetails);
         addRepositories(repositories);
+
+        uiHelper.removeErrorMessage();
         showAll();
     }
     catch (error) {
         console.log(error);
+        uiHelper.addErrorMessage('User not found');
     }
 }
 
