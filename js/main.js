@@ -72,6 +72,8 @@ function addUserInformation(profileDetails) {
     let userBlog = removeNullIfNecessary(profileDetails.blog);
     let location = removeNullIfNecessary(profileDetails.location);
     let creationDate = removeNullIfNecessary(profileDetails.created_at);
+    creationDate = formatDate(creationDate);
+
     uiHelper.addUserData(`User: ${profileDetails.login}`);
     uiHelper.addUserData(`Name: ${name}`);
     uiHelper.addUserData(`Company: ${userCompany}`);
@@ -83,6 +85,10 @@ function addUserInformation(profileDetails) {
 
 function removeNullIfNecessary(data) {
     return (data === null || data === '') ? 'Not found' : data;
+}
+
+function formatDate(date){
+    return date.split('T')[0];
 }
 
 function addRepositories(repositories){
@@ -104,6 +110,3 @@ function simplifyRepository(repository){
     }
     return simplifiedRepository;
 }
-
-// uiHelper.addRepository(repo)
-// uiHelper.addRepository(repo1);
