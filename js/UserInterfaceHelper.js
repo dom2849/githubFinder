@@ -28,6 +28,11 @@ UserInterfaceHelper.prototype.showUserProfile = function(){
     userProfile.style.display = '';
 }
 
+UserInterfaceHelper.prototype.showRepositories = function(){
+    let repositories = document.querySelector(".repositories");
+    repositories.style.display = '';
+}
+
 UserInterfaceHelper.prototype.addProfileImage = function(profileUrl){
     let image = document.querySelector(".user__image");
     image.src = profileUrl;
@@ -38,9 +43,9 @@ UserInterfaceHelper.prototype.addProfileLink = function(profileUrl){
     viewProfile.href = profileUrl;
 }
 
-UserInterfaceHelper.prototype.addProfileStatistic = function(statistic, statisticClassList){
+UserInterfaceHelper.prototype.addProfileStatistic = function(statistic){
     let userStats = document.querySelector(".user__stats");
-    let listItem = createListItem(statistic, statisticClassList);
+    let listItem = createListItem(statistic, 'hilight');
     userStats.appendChild(listItem);
 }
 
