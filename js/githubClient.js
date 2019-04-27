@@ -1,7 +1,6 @@
 import { config } from './config.js'
 
 export default function GithubClient() {
-
 }
 
 GithubClient.prototype.getUser = async function (username) {

@@ -107,3 +107,4 @@ function simplifyRepository(repository){
     }
     return simplifiedRepository;
 }
+

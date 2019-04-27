@@ -1,5 +1,4 @@
 export default function UserInterfaceHelper() {
-
 }
 
 UserInterfaceHelper.prototype.addErrorMessage = function (content) {
