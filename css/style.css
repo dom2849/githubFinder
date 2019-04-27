@@ -125,13 +125,16 @@ body{
     border-color: var(--light-blue);
 }
 
-.user,
-.repositories{
+.user{
     display: none;
 }
 
 .user__wrapper{
-    display: flex;
+    --display: flex;
+}
+
+.user__wrapper{
+    display: var(--display);
     padding: 2rem 1rem;
 }
 
@@ -155,8 +158,19 @@ body{
 }
 
 .user__hilights{
-    flex: 4;
+    --flex: 4;
 }
+
+@media(max-width: 1000px){
+    .user__hilights{
+        --flex: 2;
+    }
+}
+
+.user__hilights{
+    flex: var(--flex);
+}
+
 .user__stats{
     margin-bottom: 1rem;
 }
@@ -172,9 +186,16 @@ body{
 
 /* REPOSITORIES */
 
+.repositories {
+    display: none;
+}
 
 .repository__information{
-    display: flex;
+    --display: flex;
+}
+
+.repository__information{
+    display: var(--display);
     justify-content: space-between;
     padding: 1rem 0;
     margin-bottom: 1rem;

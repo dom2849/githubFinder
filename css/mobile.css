@@ -1,0 +1,30 @@
+.github-search__directions{
+    line-height: 1.5;
+}
+
+.user__wrapper{
+    --display: block;
+}
+
+.user__stats{
+    display: none;
+}
+
+.user__profile{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.user__view-profile{
+    margin-bottom: 2rem;
+    width: 70%;
+}
+
+.repository__information{
+    --display: block;
+}
+
+.repository__link{
+    margin-bottom: 1rem;
+}
