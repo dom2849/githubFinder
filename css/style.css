@@ -125,6 +125,11 @@ body{
     border-color: var(--light-blue);
 }
 
+.user,
+.repositories{
+    display: none;
+}
+
 .user__wrapper{
     display: flex;
     padding: 2rem 1rem;

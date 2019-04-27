@@ -43,12 +43,12 @@ function clearList(htmlListToClear) {
 
 UserInterfaceHelper.prototype.showUserProfile = function () {
     let userProfile = document.querySelector(".user");
-    userProfile.style.display = '';
+    userProfile.style.display = 'block';
 }
 
 UserInterfaceHelper.prototype.showRepositories = function () {
     let repositories = document.querySelector(".repositories");
-    repositories.style.display = '';
+    repositories.style.display = 'block';
 }
 
 UserInterfaceHelper.prototype.addProfileImage = function (profileUrl) {
@@ -73,7 +73,7 @@ UserInterfaceHelper.prototype.addUserData = function (userData) {
     userInformation.appendChild(listItem);
 }
 
-UserInterfaceHelper.prototype.addRepository = function (repository, repositoryClassList) {
+UserInterfaceHelper.prototype.addRepository = function (repository) {
     let repositories = document.querySelector(".repositories__list");
     let listItem = createListItem('', 'repository__information');
     let repositoryLink = createRepositoryLink(repository);

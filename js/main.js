@@ -8,7 +8,6 @@ const githubClient = new GithubClient();
 const uiHelper = new UserInterfaceHelper();
 const userInput = document.querySelector('.github-search__input');
 
-clearAll();
 loadEventListeners();
 
 function loadEventListeners() {
@@ -52,7 +51,6 @@ function showAll(){
 }
 
 function addProfileDetails(profileDetails) {
-    console.log(profileDetails);
     uiHelper.addProfileImage(profileDetails.avatar_url);
     uiHelper.addProfileLink(profileDetails.html_url);
     addProfileStatistics(profileDetails);
@@ -80,7 +78,6 @@ function addUserInformation(profileDetails) {
     uiHelper.addUserData(`Website/Blog: ${userBlog}`);
     uiHelper.addUserData(`Location: ${location}`);
     uiHelper.addUserData(`Member since: ${creationDate}`);
-
 }
 
 function removeNullIfNecessary(data) {
@@ -94,7 +91,7 @@ function formatDate(date){
 function addRepositories(repositories){
     let stoppingIndex = (repositories.length > numberOfRepositoriesToDisplay) ? numberOfRepositoriesToDisplay : repositories.length;
     
-    for (let i = 0; i<stoppingIndex; i++){
+    for (let i = 0; i < stoppingIndex; i++){
         let simplififiedRepository = simplifyRepository(repositories[i]);
         uiHelper.addRepository(simplififiedRepository);
     }
