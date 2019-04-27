@@ -70,8 +70,9 @@ UserInterfaceHelper.prototype.addRepository = function(repository, repositoryCla
 function createRepositoryLink(repository){
     let repositoryLink = document.createElement("a");
     repositoryLink.classList = "repository__link";
-    repositoryLink.textContent = repository.title;
+    repositoryLink.textContent = repository.name;
     repositoryLink.href = repository.url;
+    repositoryLink.target = '_blank';
     return repositoryLink;
 }
 

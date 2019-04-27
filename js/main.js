@@ -2,6 +2,7 @@ import GithubClient from './githubClient.js';
 import UserInterfaceHelper from './UserInterfaceHelper.js'
 
 const enterKeyCode = 13;
+const numberOfRepositoriesToDisplay = 5;
 
 const githubClient = new GithubClient();
 const uiHelper = new UserInterfaceHelper();
@@ -23,10 +24,14 @@ function handleKeyUp(event) {
 async function getUser() {
     clearAll();
     let userName = userInput.value;
+
     try {
         let profileDetails = await githubClient.getUser(userName);
         let repositories = await githubClient.getRepositories(userName);
+        console.log(repositories);
+        
         addProfileDetails(profileDetails);
+        addRepositories(repositories);
         showAll();
     }
     catch (error) {
@@ -78,19 +83,24 @@ function removeNullIfNecessary(data) {
     return (data === null || data === '') ? 'Not found' : data;
 }
 
-let repo = {
-    title: 'asdf',
-    url: "https://clockify.me/tracker",
-    stars: 12,
-    watchers: 12,
-    forks: 0
+function addRepositories(repositories){
+    let stoppingIndex = (repositories.length > numberOfRepositoriesToDisplay) ? numberOfRepositoriesToDisplay : repositories.length;
+    
+    for (let i = 0; i<stoppingIndex; i++){
+        let simplififiedRepository = simplifyRepository(repositories[i]);
+        uiHelper.addRepository(simplififiedRepository);
+    }
 }
-let repo1 = {
-    title: 'HELO LHELO HELLO',
-    url: "https://clockify.me/tracker",
-    stars: 12,
-    watchers: 12,
-    forks: 0
+
+function simplifyRepository(repository){
+    let simplifiedRepository = {
+        name: repository.name,
+        url: repository.html_url,
+        stars: repository.stargazers_count,
+        watchers: repository.watchers,
+        forks: repository.forks
+    }
+    return simplifiedRepository;
 }
 
 // uiHelper.addRepository(repo)
