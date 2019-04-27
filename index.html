@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -21,7 +23,10 @@
             <h1 class="github-search__title">Search GitHub Users</h1>
             <h2 class="github-search__directions">Enter a username to retrieve a user's profile details and repositories
             </h2>
-            <input type="text" class="github-search__input" placeholder="Enter username">
+            <div class="github-search__input-wrapper">
+                <input type="text" class="github-search__input" placeholder="Enter username">
+                <i class="fas fa-search github-search__icon"></i>
+            </div>
         </div>
     </section>
 
@@ -29,21 +34,21 @@
         <div class="container">
             <div class="user__wrapper">
                 <div class="user__profile">
-                    <img src="https://avatars0.githubusercontent.com/u/37960125?v=4" alt="" class="user__image">
-                    <a href="" target = "_blank"class="user__view-profile button button--primary">View profile</a>
+                    <img src="" alt="" class="user__image">
+                    <a href="" target="_blank" class="user__view-profile button button--primary">View profile</a>
                 </div>
                 <div class="user__hilights">
                     <ul class="list horizontal-list user__stats">
+                        <!-- <li class = "hilight">ONE</li>
                         <li class = "hilight">ONE</li>
                         <li class = "hilight">ONE</li>
-                        <li class = "hilight">ONE</li>
-                        <li class = "hilight">ONE</li>
+                        <li class = "hilight">ONE</li> -->
                     </ul>
                     <ul class="list user__information">
+                        <!-- <li>two</li>
                         <li>two</li>
                         <li>two</li>
-                        <li>two</li>
-                        <li>two</li>
+                        <li>two</li> -->
                     </ul>
                 </div>
             </div>

@@ -27,6 +27,10 @@ body{
     .github-search__input:hover{
         border-color: #939393;
     }
+
+    .github-search__icon:hover{
+        opacity: .6;
+    }
 }
 
 
@@ -89,13 +93,27 @@ body{
     margin-bottom: 1.4rem;
 }
 
-.github-search__input{
+.github-search__input-wrapper{
+    position: relative;
     width: 95%;
+}
+
+.github-search__input{
+    width: 100%;
     font-size: 1rem;
     padding: .5rem;
     outline: none;
     border-radius: 5px;
     margin-bottom: 1rem;
+    transition: .3s;
+}
+
+.github-search__icon{
+    position: absolute;
+    right: 0;
+    top: 8px;
+    padding: .2rem;
+    cursor: pointer;
     transition: .3s;
 }
 
